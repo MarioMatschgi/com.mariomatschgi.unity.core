@@ -1,2 +1,7 @@
-# com.mariomatschgi.core
-This is the version controll for the core library used by most of my Unity-packages
+# Mario Elsnig's Core Library
+
+It's a core library used by most of my packages
+
+# Timestamps:
+Begin: 7th March 2019
+Foundation finish: 21st March 2019
