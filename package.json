@@ -1,6 +1,6 @@
 {
   "name": "com.mariomatschgi.unity.core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "MM Core",
   "description": "Mario Elsnig's Core Library. It's the core library used by most of my packages",
   "unity": "2019.1",
