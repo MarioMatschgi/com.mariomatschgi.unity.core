@@ -4,6 +4,9 @@
   "displayName": "MM Core",
   "description": "Mario Elsnig's Core Library. It's the core library used by most of my packages",
   "unity": "2019.1",
+  "dependencies": {
+	  
+  },
   "author": {
     "name": "Mario Elsnig",
     "email": "mariomatschgi@gmail.com",
