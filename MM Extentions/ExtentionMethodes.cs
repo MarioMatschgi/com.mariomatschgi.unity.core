@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
@@ -91,7 +91,7 @@ public static class ExtentionMethodes
     public static List<T> RemoveMissingElements<T>(this List<T> _list)
     {
         for (int i = _list.Count - 1; i > -1; i--)
-            if (_list[i].Equals(null))
+            if (_list[i] == null || _list[i].Equals(null))
                 _list.RemoveAt(i);
 
         return _list;
