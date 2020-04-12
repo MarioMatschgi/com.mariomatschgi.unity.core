@@ -74,9 +74,16 @@ namespace MM.Extentions
                 if (_p.hasChildren)
                     if (GUILayout.Button(_p.displayName))
                     {
-                        if (selectedProperties.Count <= currentSidebarIdx)
+                        int _diff = Mathf.Abs(selectedProperties.Count - (currentSidebarIdx + 1));
+
+                        if (_diff > 0)
+                        {
+                            for (int i = 0; i < _diff - 1; i++)
+                                selectedProperties.Add(null);
+
                             selectedProperties.Add(serializedObject.FindProperty(_p.propertyPath));
-                        else
+                        }
+                        if (_diff == 0)
                             selectedProperties[currentSidebarIdx] = serializedObject.FindProperty(_p.propertyPath);
                     }
             }
