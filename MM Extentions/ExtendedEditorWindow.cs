@@ -83,8 +83,7 @@ namespace MM.Extentions
 
                             selectedProperties.Add(serializedObject.FindProperty(_p.propertyPath));
                         }
-                        else
-                            selectedProperties[currentSidebarIdx] = serializedObject.FindProperty(_p.propertyPath);
+                        selectedProperties[currentSidebarIdx] = serializedObject.FindProperty(_p.propertyPath);
                     }
             }
             EditorGUILayout.EndVertical();
