@@ -6,9 +6,12 @@ namespace MM
 {
     namespace Attributes
     {
-        public class MultiChoiceEnumAttribute : PropertyAttribute
+        /// <summary>
+        /// Put this Attribute on an enum variable if you want it to be able to have multiple values
+        /// </summary>
+        public class MultipleChoiceEnumAttribute : PropertyAttribute
         {
-            public MultiChoiceEnumAttribute()
+            public MultipleChoiceEnumAttribute()
             {
 
             }
@@ -17,9 +20,14 @@ namespace MM
 
     namespace Extentions
     {
-        public static class MultiChoiceEnumExtentions
+        public static class MultipleChoiceEnumExtentions
         {
-            public static List<int> ReturnSelectedElements(this Enum _enum)
+            /// <summary>
+            /// Returns the all values of an enum, if the variable has the Attriute MultiChoiceEnum
+            /// </summary>
+            /// <param name="_enum"></param>
+            /// <returns></returns>
+            public static List<int> ReturnAllEnumValues(this Enum _enum)
             {
                 List<int> selectedElements = new List<int>();
                 for (int i = 0; i < Enum.GetValues(_enum.GetType()).Length; i++)

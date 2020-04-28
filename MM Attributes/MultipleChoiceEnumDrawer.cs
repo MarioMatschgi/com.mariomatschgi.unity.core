@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using MM.Attributes;
 
-[CustomPropertyDrawer(typeof(MultiChoiceEnumAttribute))]
-public class EnumFlagsAttributeDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(MultipleChoiceEnumAttribute))]
+public class MultipleChoiceEnumAttributeDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect _position, SerializedProperty _property, GUIContent _label)
     {

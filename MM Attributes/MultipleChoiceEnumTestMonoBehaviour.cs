@@ -4,10 +4,10 @@ using MM.Extentions;
 namespace MM.Attributes
 {
     [AddComponentMenu("MM Core/MultiChoiceEnumTest")]
-    public class MultiChoiceEnumTestMonoBehaviour : MonoBehaviour
+    public class MultipleChoiceEnumTestMonoBehaviour : MonoBehaviour
     {
-        [MultiChoiceEnum]
-        public MultiChoiceTestEnum testEnum;
+        [MultipleChoiceEnum]
+        public MultipleChoiceTestEnum testEnum;
 
 
         #region Callback Methodes
@@ -19,7 +19,7 @@ namespace MM.Attributes
 
         void Start()
         {
-            foreach (MultiChoiceTestEnum _item in testEnum.ReturnSelectedElements())
+            foreach (MultipleChoiceTestEnum _item in testEnum.ReturnAllEnumValues())
                 Debug.Log("Enum value: " + _item);
         }
 

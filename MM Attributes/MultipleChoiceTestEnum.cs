@@ -1,7 +1,7 @@
 ﻿namespace MM.Attributes
 {
     [System.Flags]
-    public enum MultiChoiceTestEnum
+    public enum MultipleChoiceTestEnum
     {
         Test1,
         Test2,
