@@ -52,11 +52,15 @@ namespace MM.Util
 #if UNITY_EDITOR
                 sceneAsset = GetSceneAssetFromPath();
 #endif
-                // Update Name
-                sceneName = scenePath.Split('/').Last().Replace(".unity", "");
             }
         }
-        public string sceneName;
+        public string sceneName
+        {
+            get
+            {
+                return scenePath.Split('/').Last().Replace(".unity", "");
+            }
+        }
 
         public static implicit operator string(SceneReference sceneReference)
         {
