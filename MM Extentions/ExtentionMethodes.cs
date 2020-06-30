@@ -38,6 +38,25 @@ public static class ExtentionMethodes
      *
      *  
      */
+     
+    /// <summary>
+    /// Returns a List of all direct children
+    /// </summary>
+    /// <param name="_gameObject"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+     public static List<T> GetComponentsInDirectChildren<T>(this GameObject _gameObject) where T : Component
+     {
+         int _length = _gameObject.transform.childCount;
+         List<T> _components = new List<T>(_length);
+         for (int i = 0; i < _length; i++)
+         {
+             T _comp = _gameObject.transform.GetChild(i).GetComponent<T>();
+             if (_comp != null) 
+                 _components.Add(_comp);
+         }
+         return _components;
+     }
 
     /// <summary>
     /// Remaps the float <paramref name="_value"/> between <paramref name="_from1"/> and <paramref name="_to1"/> to a float between <paramref name="_from2"/> and <paramref name="_to2"/>
